@@ -94,16 +94,47 @@
             font-size: 24px;
         }
 
-        .balenrose {
+        .balenrose_mobile {
             position: relative;
             z-index: 1;
             margin: auto;
             aspect-ratio: 800/648;
             width: 100vw;
             height: 100vh;
-            background-image: url(flyer.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url(balenrose-facebook_mobile.jpg);
+
             animation: glitch 0.8s steps(5, end) infinite;
         }
+
+        .balenrose_desktop {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+
+            .balenrose_mobile {
+                display: none;
+            }
+
+            .balenrose_desktop {
+                display: block;
+                position: relative;
+                z-index: 1;
+                margin: auto;
+                aspect-ratio: 800/648;
+                width: 100vw;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                background-image: url(balenrose-facebook.jpg);
+                animation: glitch 0.8s steps(5, end) infinite;
+            }
+        }
+
 
         .links {
             z-index: 3;
@@ -194,7 +225,8 @@
             <p>Une nouvelle soirée de musique underground</p>
             <a href="https://www.facebook.com/share/168F1BfPpt/" target="_blank" class="raveolution"></a>
         </div-->
-        <a href="https://www.facebook.com/share/168F1BfPpt/" class="balenrose" target="_blank"></a>
+        <a href="https://www.facebook.com/share/168F1BfPpt/" class="balenrose_mobile" target="_blank"></a>
+        <a href="https://www.facebook.com/share/168F1BfPpt/" class="balenrose_desktop" target="_blank"></a>
         <!--p class="date">10 mai 2025 - npc MTL</p>
         <p class="styles">UK Hardcore! Happy Hardcore! J-Core! Hardstyle!</p>
         <div class="links">
